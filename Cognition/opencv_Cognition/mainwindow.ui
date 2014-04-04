@@ -84,19 +84,19 @@
      </font>
     </property>
     <property name="title">
-     <string>Control</string>
+     <string>제어 판넬</string>
     </property>
     <widget class="QPushButton" name="Button_Open">
      <property name="geometry">
       <rect>
        <x>50</x>
        <y>30</y>
-       <width>100</width>
+       <width>111</width>
        <height>40</height>
       </rect>
      </property>
      <property name="text">
-      <string>Open Image</string>
+      <string>이미지 불러오기</string>
      </property>
     </widget>
     <widget class="QGroupBox" name="groupBox">
@@ -114,7 +114,7 @@
       </font>
      </property>
      <property name="title">
-      <string>Contour</string>
+      <string>윤곽선 추출</string>
      </property>
      <widget class="QSlider" name="Slider_LowFilter">
       <property name="geometry">
@@ -152,7 +152,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Low Filter</string>
+       <string>낮은 임계값</string>
       </property>
      </widget>
      <widget class="QSpinBox" name="Spin_LowFilter">
@@ -188,7 +188,7 @@
        </font>
       </property>
       <property name="text">
-       <string>High Filter</string>
+       <string>높은 임계값</string>
       </property>
      </widget>
      <widget class="QSlider" name="Slider_HighFilter">
@@ -248,7 +248,7 @@
       </font>
      </property>
      <property name="title">
-      <string>SURF</string>
+      <string>특징점 추출</string>
      </property>
      <widget class="QSlider" name="Slider_Hessian">
       <property name="geometry">
@@ -277,8 +277,8 @@
        <rect>
         <x>10</x>
         <y>20</y>
-        <width>56</width>
-        <height>12</height>
+        <width>91</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="font">
@@ -289,7 +289,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Hessian</string>
+       <string>헤시안 행렬식 값</string>
       </property>
      </widget>
      <widget class="QSpinBox" name="Spin_Hessian">
@@ -330,7 +330,7 @@
       </font>
      </property>
      <property name="title">
-      <string>Matching</string>
+      <string>특징점 매칭</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -378,7 +378,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Distance Threshold</string>
+       <string>거리값</string>
       </property>
      </widget>
      <widget class="QSpinBox" name="Spin_Matching">
@@ -413,7 +413,7 @@
       </font>
      </property>
      <property name="title">
-      <string>Solution</string>
+      <string>매칭된 이미지</string>
      </property>
      <widget class="QLabel" name="Label_Solution">
       <property name="geometry">
@@ -449,7 +449,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Matchinged Image :</string>
+       <string>데이터베이스 번호 :</string>
       </property>
      </widget>
      <widget class="QLabel" name="TextLabel_Solution">
@@ -606,9 +606,6 @@
       <bool>false</bool>
      </property>
     </widget>
-    <zorder>Label_List</zorder>
-    <zorder>Label_Original</zorder>
-    <zorder>Label_Original</zorder>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
@@ -628,7 +625,7 @@
      </font>
     </property>
     <property name="text">
-     <string>RAW IMAGE</string>
+     <string>원본 이미지</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
@@ -636,7 +633,7 @@
      <rect>
       <x>280</x>
       <y>10</y>
-      <width>121</width>
+      <width>151</width>
       <height>16</height>
      </rect>
     </property>
@@ -649,7 +646,7 @@
      </font>
     </property>
     <property name="text">
-     <string>CONTOUR IMAGE</string>
+     <string>윤곽선 추출 이미지</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">
@@ -657,7 +654,7 @@
      <rect>
       <x>550</x>
       <y>10</y>
-      <width>101</width>
+      <width>151</width>
       <height>16</height>
      </rect>
     </property>
@@ -670,7 +667,7 @@
      </font>
     </property>
     <property name="text">
-     <string>SURF IMAGE</string>
+     <string>특징점 추출 이미지</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_9">
@@ -678,7 +675,7 @@
      <rect>
       <x>10</x>
       <y>250</y>
-      <width>141</width>
+      <width>171</width>
       <height>16</height>
      </rect>
     </property>
@@ -691,7 +688,7 @@
      </font>
     </property>
     <property name="text">
-     <string>DATABASE IMAGE</string>
+     <string>데이터베이스 이미지</string>
     </property>
    </widget>
   </widget>
