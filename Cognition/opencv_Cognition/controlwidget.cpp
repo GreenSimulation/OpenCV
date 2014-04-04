@@ -86,7 +86,7 @@ void ControlWidget::OpenListImage()
 
         if(image.isNull()) {
             QMessageBox::information(0, QObject::tr("Load Image Failed"),
-                                     QObject::tr("Cannot Load List"));
+                                     QObject::tr("Cannot Load %1").arg(listFileName));
 
             return;
         }

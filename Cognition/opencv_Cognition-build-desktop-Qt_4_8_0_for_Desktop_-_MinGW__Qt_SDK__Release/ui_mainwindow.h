@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Fri Mar 28 19:16:11 2014
+** Created: Fri Apr 4 19:23:04 2014
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -106,7 +106,7 @@ public:
         Box_Control->setFont(font1);
         Button_Open = new QPushButton(Box_Control);
         Button_Open->setObjectName(QString::fromUtf8("Button_Open"));
-        Button_Open->setGeometry(QRect(50, 30, 100, 40));
+        Button_Open->setGeometry(QRect(50, 30, 111, 40));
         groupBox = new QGroupBox(Box_Control);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
         groupBox->setGeometry(QRect(10, 90, 181, 121));
@@ -162,7 +162,7 @@ public:
         Slider_Hessian->setOrientation(Qt::Horizontal);
         label_3 = new QLabel(groupBox_2);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(10, 20, 56, 12));
+        label_3->setGeometry(QRect(10, 20, 91, 16));
         label_3->setFont(font3);
         Spin_Hessian = new QSpinBox(groupBox_2);
         Spin_Hessian->setObjectName(QString::fromUtf8("Spin_Hessian"));
@@ -249,9 +249,6 @@ public:
         Label_List->setGeometry(QRect(5, 5, 790, 300));
         Label_List->setStyleSheet(QString::fromUtf8("border: 1px solid #000;"));
         Label_List->setScaledContents(false);
-        Label_List->raise();
-        Label_Original->raise();
-        Label_Original->raise();
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(10, 10, 101, 16));
@@ -263,15 +260,15 @@ public:
         label_4->setFont(font6);
         label_7 = new QLabel(centralWidget);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(280, 10, 121, 16));
+        label_7->setGeometry(QRect(280, 10, 151, 16));
         label_7->setFont(font6);
         label_8 = new QLabel(centralWidget);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(550, 10, 101, 16));
+        label_8->setGeometry(QRect(550, 10, 151, 16));
         label_8->setFont(font6);
         label_9 = new QLabel(centralWidget);
         label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setGeometry(QRect(10, 250, 141, 16));
+        label_9->setGeometry(QRect(10, 250, 171, 16));
         label_9->setFont(font6);
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
@@ -288,18 +285,18 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
         Box_OriginalImage->setTitle(QString());
         Label_Original->setText(QString());
-        Box_Control->setTitle(QApplication::translate("MainWindow", "Control", 0, QApplication::UnicodeUTF8));
-        Button_Open->setText(QApplication::translate("MainWindow", "Open Image", 0, QApplication::UnicodeUTF8));
-        groupBox->setTitle(QApplication::translate("MainWindow", "Contour", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("MainWindow", "Low Filter", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("MainWindow", "High Filter", 0, QApplication::UnicodeUTF8));
-        groupBox_2->setTitle(QApplication::translate("MainWindow", "SURF", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("MainWindow", "Hessian", 0, QApplication::UnicodeUTF8));
-        Box_Matching->setTitle(QApplication::translate("MainWindow", "Matching", 0, QApplication::UnicodeUTF8));
-        label_5->setText(QApplication::translate("MainWindow", "Distance Threshold", 0, QApplication::UnicodeUTF8));
-        Box_Solution->setTitle(QApplication::translate("MainWindow", "Solution", 0, QApplication::UnicodeUTF8));
+        Box_Control->setTitle(QApplication::translate("MainWindow", "\354\240\234\354\226\264 \355\214\220\353\204\254", 0, QApplication::UnicodeUTF8));
+        Button_Open->setText(QApplication::translate("MainWindow", "\354\235\264\353\257\270\354\247\200 \353\266\210\353\237\254\354\230\244\352\270\260", 0, QApplication::UnicodeUTF8));
+        groupBox->setTitle(QApplication::translate("MainWindow", "\354\234\244\352\263\275\354\204\240 \354\266\224\354\266\234", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("MainWindow", "\353\202\256\354\235\200 \354\236\204\352\263\204\352\260\222", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("MainWindow", "\353\206\222\354\235\200 \354\236\204\352\263\204\352\260\222", 0, QApplication::UnicodeUTF8));
+        groupBox_2->setTitle(QApplication::translate("MainWindow", "\355\212\271\354\247\225\354\240\220 \354\266\224\354\266\234", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("MainWindow", "\355\227\244\354\213\234\354\225\210 \355\226\211\353\240\254\354\213\235 \352\260\222", 0, QApplication::UnicodeUTF8));
+        Box_Matching->setTitle(QApplication::translate("MainWindow", "\355\212\271\354\247\225\354\240\220 \353\247\244\354\271\255", 0, QApplication::UnicodeUTF8));
+        label_5->setText(QApplication::translate("MainWindow", "\352\261\260\353\246\254\352\260\222", 0, QApplication::UnicodeUTF8));
+        Box_Solution->setTitle(QApplication::translate("MainWindow", "\353\247\244\354\271\255\353\220\234 \354\235\264\353\257\270\354\247\200", 0, QApplication::UnicodeUTF8));
         Label_Solution->setText(QString());
-        label_6->setText(QApplication::translate("MainWindow", "Matchinged Image :", 0, QApplication::UnicodeUTF8));
+        label_6->setText(QApplication::translate("MainWindow", "\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244 \353\262\210\355\230\270 :", 0, QApplication::UnicodeUTF8));
         TextLabel_Solution->setText(QApplication::translate("MainWindow", "NULL", 0, QApplication::UnicodeUTF8));
         Box_ContourImage->setTitle(QString());
         Label_Contour->setText(QString());
@@ -307,10 +304,10 @@ public:
         Label_SURF->setText(QString());
         Box_List->setTitle(QString());
         Label_List->setText(QString());
-        label_4->setText(QApplication::translate("MainWindow", "RAW IMAGE", 0, QApplication::UnicodeUTF8));
-        label_7->setText(QApplication::translate("MainWindow", "CONTOUR IMAGE", 0, QApplication::UnicodeUTF8));
-        label_8->setText(QApplication::translate("MainWindow", "SURF IMAGE", 0, QApplication::UnicodeUTF8));
-        label_9->setText(QApplication::translate("MainWindow", "DATABASE IMAGE", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("MainWindow", "\354\233\220\353\263\270 \354\235\264\353\257\270\354\247\200", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("MainWindow", "\354\234\244\352\263\275\354\204\240 \354\266\224\354\266\234 \354\235\264\353\257\270\354\247\200", 0, QApplication::UnicodeUTF8));
+        label_8->setText(QApplication::translate("MainWindow", "\355\212\271\354\247\225\354\240\220 \354\266\224\354\266\234 \354\235\264\353\257\270\354\247\200", 0, QApplication::UnicodeUTF8));
+        label_9->setText(QApplication::translate("MainWindow", "\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244 \354\235\264\353\257\270\354\247\200", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
