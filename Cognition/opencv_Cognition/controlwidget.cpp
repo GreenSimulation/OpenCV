@@ -51,14 +51,21 @@ ControlWidget::~ControlWidget()
 void ControlWidget::OpenSolutionImage()
 {
     QString startPath = QApplication::applicationDirPath();
-    QString listFileName = startPath + "/Sample/sample0" + QString::number(this->max_Index) + ".jpg";
+
+    QString sampleNumber;
+    if(this->max_Index + 1 >= 10) {
+        sampleNumber = QString::number(this->max_Index + 1);
+    }
+    else sampleNumber = "0" + QString::number(this->max_Index + 1);
+
+    QString listFileName = startPath + "/Sample/sample" + sampleNumber + ".jpg";
 
     if(!listFileName.isEmpty()) {
         QImage image(listFileName);
 
         if(image.isNull()) {
             QMessageBox::information(0, QObject::tr("Load Image Failed"),
-                                     QObject::tr("Cannot Load List"));
+                                     QObject::tr("Cannot Load Solution Image"));
 
             return;
         }
@@ -79,7 +86,7 @@ void ControlWidget::OpenSolutionImage()
 void ControlWidget::OpenListImage()
 {
     QString startPath = QApplication::applicationDirPath();
-    QString listFileName = startPath + "/Sample/list.jpg";
+    QString listFileName = startPath + "/Sample/database.jpg";
 
     if(!listFileName.isEmpty()) {
         QImage image(listFileName);
@@ -101,7 +108,7 @@ void ControlWidget::OpenListImage()
 
         bufferListImage = new QPixmap();
         *bufferListImage = QPixmap::fromImage(imageView);
-        *bufferListImage = bufferListImage->scaled(790, 300);
+        *bufferListImage = bufferListImage->scaled(800, 300);
     }
 }
 
@@ -136,9 +143,11 @@ bool ControlWidget::OpenImage()
 
         this->ContourImage();
         this->SURFImage();
+
+        return true;
     }
 
-    return true;
+    return false;
 }
 
 
@@ -234,7 +243,7 @@ void ControlWidget::MatchingImage()
         cvClearMemStorage(this->m_storage_Matching);
     }
 
-    for(int i = 0; i < 10; ++i)
+    for(int i = 0; i < 12; ++i)
     {
         this->True_Point[i] = 0;
     }
@@ -278,7 +287,7 @@ void ControlWidget::MatchingImage()
 
     this->bufferMatchingImage = new QPixmap();
     *bufferMatchingImage = QPixmap::fromImage(Matching_Image);
-    *bufferMatchingImage = bufferMatchingImage->scaled(790, 300);
+    *bufferMatchingImage = bufferMatchingImage->scaled(800, 300);
 
     cvZero(this->matching_image);
     cvClearSeq(keypoints2);
@@ -348,11 +357,11 @@ void ControlWidget::findPairs(CvSeq *keypoints1, CvSeq *descriptors1,
 
 void ControlWidget::JudgePairs(int x, int y)
 {
-    for(int i = 0; i < 5; ++i)
+    for(int i = 0; i < 6; ++i)
     {
-        if((x > 173 * i) && (x < 173 * (i + 1))) {
-            if(y < 122) this->True_Point[i]++;
-            else this->True_Point[i + 5]++;
+        if((x > 202 * i) && (x < 202 * (i + 1))) {
+            if(y < 152) this->True_Point[i]++;
+            else this->True_Point[i + 6]++;
         }
     }
 }
@@ -362,7 +371,7 @@ int ControlWidget::FindMax()
 {
     int max = 0;
 
-    for(int i = 0; i < 10; ++i)
+    for(int i = 0; i < 12; ++i)
     {
         if(max < this->True_Point[i]) {
             max = True_Point[i];

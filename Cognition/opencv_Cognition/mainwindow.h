@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include "Header.h"
-
+#include <QString>
 #include <opencv.hpp>
 
 
@@ -23,7 +23,7 @@ public:
 protected:
     void Init();
     bool isStart;
-
+    void FindDB(int number);
 
 private slots:
     void on_Button_Open_clicked();
@@ -36,7 +36,7 @@ private slots:
     void on_Slider_Hessian_valueChanged();
     void on_Spin_Hessian_valueChanged();
 
-    void on_Box_Matching_toggled();
+    void on_Button_Matching_clicked();
     void on_Slider_Matching_valueChanged();
     void on_Spin_Matching_valueChanged();
     

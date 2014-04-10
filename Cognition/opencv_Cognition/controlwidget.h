@@ -2,6 +2,7 @@
 #define CONTROLWIDGET_H
 
 #include <opencv.hpp>
+#include <QString>
 
 
 class ControlWidget
@@ -45,7 +46,7 @@ protected:
     int contour_High;
     int surf_Hessian;
     int matching_distance;
-    int True_Point[10];
+    int True_Point[12];
     int max_Index;
     int matching_number;
 

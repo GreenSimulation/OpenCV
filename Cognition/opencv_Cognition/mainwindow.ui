@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>생태계 교란 식물 인식 프로그램</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QGroupBox" name="Box_OriginalImage">
@@ -70,7 +70,7 @@
    <widget class="QGroupBox" name="Box_Control">
     <property name="geometry">
      <rect>
-      <x>820</x>
+      <x>825</x>
       <y>10</y>
       <width>200</width>
       <height>570</height>
@@ -92,7 +92,7 @@
        <x>50</x>
        <y>30</y>
        <width>111</width>
-       <height>40</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
@@ -103,7 +103,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>90</y>
+       <y>70</y>
        <width>181</width>
        <height>121</height>
       </rect>
@@ -231,7 +231,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>220</y>
+       <y>190</y>
        <width>181</width>
        <height>71</height>
       </rect>
@@ -310,12 +310,15 @@
      </widget>
     </widget>
     <widget class="QGroupBox" name="Box_Matching">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>300</y>
+       <y>270</y>
        <width>181</width>
-       <height>71</height>
+       <height>101</height>
       </rect>
      </property>
      <property name="minimumSize">
@@ -330,10 +333,10 @@
       </font>
      </property>
      <property name="title">
-      <string>특징점 매칭</string>
+      <string>특징점 판별</string>
      </property>
      <property name="checkable">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="checked">
       <bool>false</bool>
@@ -397,6 +400,19 @@
        <number>30</number>
       </property>
      </widget>
+     <widget class="QPushButton" name="Button_Matching">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>70</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>판별하기</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="Box_Solution">
      <property name="geometry">
@@ -413,7 +429,7 @@
       </font>
      </property>
      <property name="title">
-      <string>매칭된 이미지</string>
+      <string>판별된 이미지</string>
      </property>
      <widget class="QLabel" name="Label_Solution">
       <property name="geometry">
@@ -436,7 +452,7 @@
        <rect>
         <x>10</x>
         <y>160</y>
-        <width>121</width>
+        <width>71</width>
         <height>16</height>
        </rect>
       </property>
@@ -449,16 +465,16 @@
        </font>
       </property>
       <property name="text">
-       <string>데이터베이스 번호 :</string>
+       <string>판별된 식물 : </string>
       </property>
      </widget>
      <widget class="QLabel" name="TextLabel_Solution">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>160</y>
-        <width>41</width>
-        <height>16</height>
+        <x>80</x>
+        <y>158</y>
+        <width>91</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="font">
@@ -470,7 +486,10 @@
        </font>
       </property>
       <property name="text">
-       <string>NULL</string>
+       <string>없음</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -564,9 +583,9 @@
    <widget class="QGroupBox" name="Box_List">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>5</x>
       <y>270</y>
-      <width>801</width>
+      <width>810</width>
       <height>310</height>
      </rect>
     </property>
@@ -592,7 +611,7 @@
       <rect>
        <x>5</x>
        <y>5</y>
-       <width>790</width>
+       <width>800</width>
        <height>300</height>
       </rect>
      </property>
