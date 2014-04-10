@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += widgets
 
 TARGET = opencv_Cognition
 TEMPLATE = app

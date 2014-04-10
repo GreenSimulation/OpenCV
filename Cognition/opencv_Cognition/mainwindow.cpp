@@ -1,6 +1,7 @@
 #include "Header.h"
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QTextCodec>
 #include <opencv.hpp>
 
 
@@ -26,9 +27,10 @@ void MainWindow::Init()
 
     this->isStart = true;
 
+
+
     control->OpenListImage();
     ui->Label_List->setPixmap(control->returnImageBuffer(LIST));
-
 
     ui->Spin_LowFilter->setRange(0, 500);
     ui->Spin_LowFilter->setValue(100);
@@ -42,6 +44,62 @@ void MainWindow::Init()
 }
 
 
+void MainWindow::FindDB(int number)
+{
+    switch(number)
+    {
+    case 1:
+        ui->TextLabel_Solution->setText(tr("돼지풀"));
+        break;
+
+    case 2:
+        ui->TextLabel_Solution->setText(tr("단풍잎 돼지풀"));
+        break;
+
+    case 3:
+        ui->TextLabel_Solution->setText(tr("서양등골나무"));
+        break;
+
+    case 4:
+        ui->TextLabel_Solution->setText(tr("물참새피"));
+        break;
+
+    case 5:
+        ui->TextLabel_Solution->setText(tr("털물참새피"));
+        break;
+
+    case 6:
+        ui->TextLabel_Solution->setText(tr("도깨비가지"));
+        break;
+
+    case 7:
+        ui->TextLabel_Solution->setText(tr("가시박"));
+        break;
+
+    case 8:
+        ui->TextLabel_Solution->setText(tr("애기수영"));
+        break;
+
+    case 9:
+        ui->TextLabel_Solution->setText(tr("서양금혼초"));
+        break;
+
+    case 10:
+        ui->TextLabel_Solution->setText(tr("미국쑥부쟁이"));
+        break;
+
+    case 11:
+        ui->TextLabel_Solution->setText(tr("양미역취"));
+        break;
+
+    case 12:
+        ui->TextLabel_Solution->setText(tr("가시상추"));
+        break;
+    }
+}
+
+
+
 void MainWindow::on_Button_Open_clicked()
 {
     if(control->OpenImage()) {
@@ -52,7 +110,6 @@ void MainWindow::on_Button_Open_clicked()
         if(ui->Box_Matching->isChecked()) {
             control->MatchingImage();
             ui->Label_List->setPixmap(control->returnImageBuffer(MATCHING));
-            ui->TextLabel_Solution->setText(QString::number(control->FindMax()));
             this->control->OpenSolutionImage();
             ui->Label_Solution->setPixmap(control->returnImageBuffer(SOLUTION));
         }
@@ -121,16 +178,16 @@ void MainWindow::on_Spin_Hessian_valueChanged()
 }
 
 
-void MainWindow::on_Box_Matching_toggled()
+void MainWindow::on_Button_Matching_clicked()
 {
-    if(!this->isStart && ui->Box_Matching->isChecked()) {
+    if(!this->isStart) {
         control->MatchingImage();
         ui->Label_List->setPixmap(control->returnImageBuffer(MATCHING));
-        ui->TextLabel_Solution->setText(QString::number(control->FindMax()));
+        this->FindDB(control->FindMax());
+//        ui->TextLabel_Solution->setText(QString::number(control->FindMax()));
         this->control->OpenSolutionImage();
         ui->Label_Solution->setPixmap(control->returnImageBuffer(SOLUTION));
     }
-    else ui->Label_List->setPixmap(control->returnImageBuffer(LIST));
 }
 
 
